@@ -21,9 +21,12 @@ function pressIt () {
 
 function submitIt(event) {
   $('#typing').on('submit', 
-  function()  {
-    alert('Your form is going to be submitted now.');
-    event.preventDefault();
+  function(){
+    if ($("input:first").val() === 'correct') {
+      alert('Your form is going to be submitted now.');
+      return;
+    }
+    alert('you entered the wrong value');
     return;
   });
 }
@@ -35,4 +38,4 @@ getIt();
 frameIt();
 pressIt();
 submitIt();
-});
+})
