@@ -23,6 +23,7 @@ function submitIt(event) {
   $('#typing').on('submit', 
   function()  {
     alert('Your form is going to be submitted now.');
+    event.preventDefault();
     return;
   });
 }
